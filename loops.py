@@ -45,21 +45,102 @@ print(newlist)
 
 # from a list 1-50, get the sum of all the elements
 
+total = 0
+
+for num in list(range(1,51)):
+    total = total + num
+
+print(total)
+
 # from a list 1-50, get the product of all the elements
 
-# from a list [1,6,2,4,2,9,11,4,8], get the maximum element
+total = 1
+
+for num in range(1, 51):
+    total = num * total
+
+print(total)
+
+# from a list [1,6,2,4,2,9,11,4,8], get the maximum element (this only works for positive numbers)
+
+mylist = [1,6,2,4,2,9,11,4,8]
+max_num = 0
+
+for x in mylist:
+    if x > max_num:
+        max_num = x
+
+print(max_num) 
+
+# from a list [-1,-6,-2,-4,-2,-9,-11,-4,-8], get the maximum element (if I don't know what's in the list)
+
+mylist = [-1,-6,-2,-4,-2,-9,-11,-4,-8]
+max_num = mylist[0]
+
+for x in mylist:
+    if x > max_num:
+        max_num = x
+
+print(max_num) 
+
 
 # from the same list as the above, get the minumum element
 
+mylist = [1,6,2,4,2,9,11,4,8]
+min_num = mylist[0]
+
+for x in mylist:
+    if x < min_num:
+        min_num = x
+
+print(min_num)
+
 # from a list 1-50, get the sum of all the even elements
 
-# FILTERING (taking a collection and returning a collection of the same size or smaller
+sum_num = 0
+
+for x in range(1, 51):
+    if x % 2 == 0:
+        sum_num = sum_num + x
+
+print(sum_num)
+
+# FILTERING (taking a collection and returning a collection of the same size or smaller)
 
 # from a list 1-50, get a list of just the even elements
 
+even_list = []
+
+for x in range(1, 51):
+    if x % 2 == 0:
+        even_list.append(x)
+
+print(even_list)
+
 # from a list 1-50, get a list of all the elements divisible by 3
 
-# from a list of a-z, get a list of the consenents
+three_list = []
+
+for x in range(1, 51):
+    if x % 3 == 0:
+        three_list.append(x)
+
+print(three_list)
+
+
+# from a list of a-z, get a list of the consonants
+
+import string
+alpha_list = list(string.ascii_lowercase[:26])
+vowel_list = ['a', 'e', 'i', 'o', 'u']
+con_list = []
+
+for x in alpha_list:
+    if x not in vowel_list:
+        con_list.append(x)
+
+print(con_list)
+
 
 # NESTED LOOPS
 
