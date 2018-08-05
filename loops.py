@@ -144,11 +144,13 @@ print(con_list)
 
 # NESTED LOOPS
 
-#
+# for a list of lists of numbers [[1, 2, 3, 4], [60, 61, 62, 63], [101, 102, 103, 104]]
+# create a list of lists of only even numbers
+# eg: [[2, 4], [60, 62], [102, 104]]
 
-# from the lists a-c, and 1-4, generate a list of their cartesian product.
+# flattening a nested list. For a list of lists of 10 (1-10, 11-20, 21-30, 31-40, 41-50),
+# flatten the list to a list of 1-50
+
+# from the lists a-c, and 1-3, generate a list of their cartesian products.
 # (One way to do it would be to build 2-tuples, which would look like:
 # [('a',1), ('a',2), ('a',3), ('b',1), ('b',2), ('b',3), ('c',1), ('c',2), ('c',3)]
-
-
-
