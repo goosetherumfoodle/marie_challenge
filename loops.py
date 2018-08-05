@@ -148,9 +148,66 @@ print(con_list)
 # create a list of lists of only even numbers
 # eg: [[2, 4], [60, 62], [102, 104]]
 
+lol = [[1, 2, 3, 4], [60, 61, 62, 63], [101, 102, 103, 104]]
+lol1 = []
+lol2 = []
+lol3 = []
+
+for x in lol[0]:
+    if x % 2 == 0:
+        lol1.append(x)
+
+for x in lol[1]:
+    if x % 2 == 0:
+        lol2.append(x)
+
+for x in lol[2]:
+    if x % 2 == 0:
+        lol3.append(x)
+
+lol_even = [(lol1), (lol2), (lol3)]
+
+print(lol_even)
+
+#----- Above is not the right way -----
+
+lol = [[1, 2, 3, 4], [60, 61, 62, 63], [101, 102, 103, 104]]
+
+output = []
+
+for one_list in lol:
+    evens = []
+    for x in one_list:
+        if x % 2 == 0:
+            evens.append(x)
+    output.append(evens)
+
+print(output)
+
 # flattening a nested list. For a list of lists of 10 (1-10, 11-20, 21-30, 31-40, 41-50),
 # flatten the list to a list of 1-50
+
+lol10 = [list(range(1,11)), list(range(11,21)), list(range(21,31)), list(range(31,41)), list(range(41,51))]
+flattest_list = []
+
+for a_list in lol10:
+    for x in a_list:
+        flattest_list.append(x)
+
+print(flattest_list) 
+
 
 # from the lists a-c, and 1-3, generate a list of their cartesian products.
 # (One way to do it would be to build 2-tuples, which would look like:
 # [('a',1), ('a',2), ('a',3), ('b',1), ('b',2), ('b',3), ('c',1), ('c',2), ('c',3)]
+
+x_list = ['a', 'b', 'c']
+y_list = [1, 2, 3]
+
+combo_list = []
+
+for x in x_list:
+    for y in y_list:
+        combo_list.append((x, y))
+
+print(combo_list)
